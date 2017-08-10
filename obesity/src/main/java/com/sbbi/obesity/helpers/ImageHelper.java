@@ -10,15 +10,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class ImageHelper {
 
-	private static final String PATH = "/home/bsilva/Desktop/sbbi/obesityApp/images/";
+	//private static final String PATH = "/home/bsilva/Desktop/sbbi/obesityApp/images/";
 	//private static final String PATH = "/home/public/sbbi09/bruno/obesityMatlab/foodImgs/";
 	
 	public static String buildImagePath(MultipartFile file, long timeInMillis){
-		return PATH + timeInMillis + getExtension(file.getOriginalFilename());
+		return com.sbbi.obesity.helpers.Paths.UPLOADED_IMAGES_PATH + timeInMillis + getExtension(file.getOriginalFilename());
 	}
 	
 	public static String buildImagePath(MultipartFile file, String timeInMillis){
-		return PATH + timeInMillis + getExtension(file.getOriginalFilename());
+		return com.sbbi.obesity.helpers.Paths.UPLOADED_IMAGES_PATH + timeInMillis + getExtension(file.getOriginalFilename());
 	}
 	
 	private static String getExtension(String fileName) {
@@ -40,9 +40,9 @@ public class ImageHelper {
 		try {
 			
 			//creates user folder
-			File userDir = new File(PATH + userId);
+			File userDir = new File(com.sbbi.obesity.helpers.Paths.UPLOADED_IMAGES_PATH + userId);
 			//creates meal img folder
-			File mealDir = new File(PATH + userId + "/" + currentTimeMillis);
+			File mealDir = new File(com.sbbi.obesity.helpers.Paths.UPLOADED_IMAGES_PATH + userId + "/" + currentTimeMillis);
 			
 			if(!userDir.exists())
 				userDir.mkdir();
@@ -51,8 +51,8 @@ public class ImageHelper {
 				mealDir.mkdir();
 			
 			//build image path
-			String imgPath = PATH + userId + "/" + currentTimeMillis + "/" + imageId + ".jpg";
-			
+			String imgPath = com.sbbi.obesity.helpers.Paths.UPLOADED_IMAGES_PATH + userId + "/" + currentTimeMillis + "/" + imageId + ".jpg";
+			System.out.println("saving image at: " + imgPath);
 			//saves image
 			ImageHelper.transferTo(imgPath, file);
 			

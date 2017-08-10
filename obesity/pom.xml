@@ -43,15 +43,56 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-commons</artifactId>
 		</dependency>
-
-		<!-- external jars -->
+		
 		<dependency>
+			<groupId>javabuilder</groupId>
+			<artifactId>javabuilder</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>segcluster</groupId>
+			<artifactId>segcluster</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>segpipeline</groupId>
+			<artifactId>segpipeline</artifactId>
+			<version>1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>test</groupId>
+			<artifactId>test</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>clusterside</groupId>
+			<artifactId>clusterside</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons</groupId>
+			<artifactId>commons</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>sideimg</groupId>
+			<artifactId>sideimg</artifactId>
+			<version>1</version>
+		</dependency>
+		
+		<!-- external jars -->
+		<!-- <dependency>
 	    	<groupId>commons</groupId>
 	    	<artifactId>commons</artifactId>
 	    	<version>1.0</version>
@@ -97,7 +138,7 @@
 	    	<version>1.0</version>
 	    	<scope>system</scope>
 	    	<systemPath>${basedir}/libs/sideImage.jar</systemPath>
-	  	</dependency>
+	  	</dependency> -->
 	</dependencies>
 
 	<build>

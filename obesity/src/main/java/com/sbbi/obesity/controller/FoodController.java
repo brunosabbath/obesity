@@ -29,12 +29,16 @@ public class FoodController {
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Food> list(){
 		
+		System.out.println("food controller");
+		
 		List<Food> list = new ArrayList<>();
 		FoodManager manager = new FoodManager();
 		
 		try {
 			manager.addConnection(ConnectionFactory.getConnection());
 			list = manager.listFood();
+			
+			System.out.println("food: " + list);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

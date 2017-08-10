@@ -204,6 +204,7 @@ public class FoodManager {
 
 	public void addConnection(Connection connection) {
 		this.connection = connection;
+		System.out.println("connection: " + connection);
 		
 	}
 }

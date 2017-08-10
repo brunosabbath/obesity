@@ -1,7 +1,9 @@
 package com.sbbi.obesity.manager;
 
 import com.mathworks.toolbox.javabuilder.MWException;
+
 import com.mathworks.toolbox.javabuilder.MWNumericArray;
+
 import com.sbbi.obesity.model.Pixels;
 
 import SegmentationCluster.SegmentationTop;
